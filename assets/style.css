@@ -1,0 +1,81 @@
+/* Homework 3 - Chez Session
+   Simple restaurant layout with standard HTML and CSS.
+*/
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f7f4ed;
+  color: #29241f;
+  font: 16px/1.5 Arial, Helvetica, sans-serif;
+}
+header {
+  background: #fff;
+  border-bottom: 3px solid #75513d;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand { font-size: 20px; font-weight: bold; color: #583b2c; }
+.brand span { color: #aa7251; }
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { color: #583b2c; text-decoration: none; }
+nav a:hover, nav a.current { text-decoration: underline; }
+main { max-width: 960px; padding: 35px 18px 55px; margin: 0 auto; }
+.hero { margin-bottom: 24px; }
+.eyebrow, .section-number { color: #775849; font-size: 13px; font-weight: bold; }
+h1 { font-size: 32px; margin: 9px 0; }
+h1 em { font-style: normal; }
+h2 { font-size: 22px; margin: 10px 0 15px; }
+h3 { font-size: 17px; margin: 0 0 8px; }
+p { margin: 8px 0 15px; }
+.two-col { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; }
+.panel {
+  background: #fff;
+  border: 1px solid #d8d0c6;
+  border-radius: 4px;
+  padding: 24px;
+}
+label, legend { display: block; margin: 15px 0 7px; font-weight: bold; }
+select, input[type=text] {
+  width: 100%; border: 1px solid #afa59b; border-radius: 3px;
+  background: white; padding: 10px; font: inherit;
+}
+fieldset { padding: 0; border: none; margin: 16px 0; }
+fieldset legend { margin: 0 0 8px; }
+.sizes { display: flex; gap: 17px; flex-wrap: wrap; }
+.size { font-weight: normal; margin: 0; }
+input[type=radio] { accent-color: #75513d; }
+button, .button-link {
+  display: inline-block; background: #75513d; color: white;
+  border: 1px solid #75513d; border-radius: 3px;
+  padding: 10px 16px; font: bold 14px Arial, sans-serif;
+  cursor: pointer; text-decoration: none;
+}
+button:hover, .button-link:hover { background: #583b2c; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #d9a665; outline-offset: 2px;
+}
+form button { margin-top: 8px; }
+.welcome-note { background: #f3ede5; border-left: 3px solid #75513d; padding: 9px 12px; font-size: 14px; }
+.insight-card { padding: 15px 0; border-top: 1px solid #e0d9d1; }
+.insight-card p { margin: 5px 0; }
+.insight-note, .note { color: #64574c; font-size: 14px; }
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.price-figure { font-size: 24px; font-weight: bold; color: #583b2c; }
+.full-width-note { grid-column: 1 / -1; }
+.narrow { max-width: 730px; }
+.receipt { margin: 22px 0; }
+.receipt-card { line-height: 2; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.secondary-link { background: white; color: #583b2c; }
+.secondary-link:hover { color: white; }
+footer { text-align: center; color: #64574c; font-size: 13px; padding: 22px; border-top: 1px solid #d8d0c6; }
+@media (max-width: 700px) {
+  header { display: block; padding: 15px; }
+  nav { margin-top: 10px; }
+  .two-col { grid-template-columns: 1fr; }
+  .panel { padding: 18px; }
+  h1 { font-size: 27px; }
+}
